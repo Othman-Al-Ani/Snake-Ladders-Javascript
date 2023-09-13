@@ -1,8 +1,10 @@
 var diceImg = document.getElementById("diceImg");
-var gameBoard = document.getElementById("")
+var gameBoard = document.getElementById("gameboard");
 //var diceNumb = rollDice();
 
-diceImg.addEventListener('click', rollDice)
+console.log("ur mom");
+
+diceImg.addEventListener('click', rollDice);
 
 
 function rollDice() {
@@ -19,3 +21,12 @@ function rollDice() {
     return rand;
 }
 
+
+function loadGame() {
+    for(i = 1; i<101; i++)
+    {
+        var temp = document.createElement ("div");
+        temp.id = i;
+        gameBoard.appendChild(temp);
+    }
+}

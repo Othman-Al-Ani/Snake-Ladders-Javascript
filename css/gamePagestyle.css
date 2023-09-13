@@ -5,7 +5,7 @@ body {
     background-color: #819A88;
 }
 
-.gameboard {
+#gameboard {
     display: flex;
     flex-wrap: wrap;
     width: 1080px;
@@ -19,7 +19,7 @@ body {
 
 }
 
-.gameboard div {
+#gameboard div {
     width: 108px;
     height: 108px;
 }
