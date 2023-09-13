@@ -1,0 +1,20 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.gameboard {
+    display: flex;
+    flex-wrap: wrap;
+    width: 1080px;
+    background-image: url('snakes-ladders-background.avif');
+    background-position: center;
+    background-size: cover;
+
+
+}
+
+.gameboard div {
+    width: 108px;
+    height: 108px;
+}
