@@ -5,6 +5,14 @@ body {
 
 }
 
+a{
+    color: white;
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: none;
+}
 
 .box{
 background-color:#DDBEB1;
@@ -23,9 +31,18 @@ background-color:#DDBEB1;
 
 .box-title{
     padding: 5px;
+    margin: auto;
 }
 
 .header-btn{
     width: 50px;
     aspect-ratio: 1;
 }
+
+
+.main{
+
+    justify-content: center;
+    align-items: center;
+}
+
