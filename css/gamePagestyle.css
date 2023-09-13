@@ -9,7 +9,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     width: 1080px;
-    background-image: url('snakes-ladders-background.avif');
+    background-image: url('../img/snakes-ladders-background.avif');
     background-position: center;
     background-size: cover;
 
@@ -40,7 +40,9 @@ body {
 .dice img {
     height: 200px;
     width: 200px;
+    cursor: pointer;
 }
+
 
 .settings {
     display: flex;
