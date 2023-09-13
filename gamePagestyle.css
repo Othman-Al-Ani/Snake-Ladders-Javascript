@@ -2,6 +2,7 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
+
 }
 
 .gameboard {
@@ -12,7 +13,8 @@ body {
     background-position: center;
     background-size: cover;
 
-    margin: 0px;
+    margin: 125px;
+    margin-right: 0px;
 
 
 }
@@ -22,13 +24,56 @@ body {
     height: 108px;
 }
 
-.settings {
-    margin-left: 250px;
-    background-color: hotpink;
-    width: 540px;
+.dice {
+    margin-left: 40px;
+    margin-top: 700px;
+    width: 500px;
+    height: 500px;
+    background: rgb(93, 93, 184);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
 }
 
-.player{
+.dice img {
+    height: 200px;
+    width: 200px;
+}
+
+.settings {
+    display: flex;
+    flex-direction: column;
+
+    position: absolute;
+    right: 0;
+    width: 740px;
+    height: 100%;
+    background-color: hotpink;
+    margin-bottom: 125px;
+}
+
+.settings h1 {
+    width: fit-content;
+    margin-inline: auto;
+    font-size: 60px;
+    color: white;
+}
+
+.settings button {
+    width: 50%;
+    height: 50px;
+    margin-inline: auto;
+    margin-top: 15px;
+    border-radius: 15px;
+}
+
+.settings button:hover {
+    background-color: aqua;
+}
+
+.player {
     background: blue;
     z-index: 9000;
     width: 108px;
