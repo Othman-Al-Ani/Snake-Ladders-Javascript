@@ -53,9 +53,22 @@ a:hover {
 
 
 
-header .header-btn {
+header .header-btn-question {
     font-size: 50px;
     padding: 5px;
 
     width: 60px;
+
+    background-color: #DDBEB1;
+    border: none;
+}
+
+header .header-btn-volume {
+    font-size: 50px;
+    padding: 5px;
+
+    width: 60px;
+
+    background-color: #DDBEB1;
+    border: none;
 }
