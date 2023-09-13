@@ -1,6 +1,7 @@
 body {
     margin: 0;
     padding: 0;
+    display: flex;
 }
 
 .gameboard {
@@ -11,10 +12,26 @@ body {
     background-position: center;
     background-size: cover;
 
+    margin: 0px;
+
 
 }
 
 .gameboard div {
     width: 108px;
     height: 108px;
+}
+
+.settings {
+    margin-left: 250px;
+    background-color: hotpink;
+    width: 540px;
+}
+
+.player{
+    background: blue;
+    z-index: 9000;
+    width: 108px;
+    height: 108px;
+    border-radius: 55px;
 }
