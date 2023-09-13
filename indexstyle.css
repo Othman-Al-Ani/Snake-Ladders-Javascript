@@ -1,21 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
 body {
     background-color: #819A88;
     color: #fff;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Indie Flower', cursive;
 
 }
 
-a{
+a {
     color: white;
     text-decoration: none;
 }
 
-a:hover{
+a:hover {
     text-decoration: none;
 }
 
-.box{
-background-color:#DDBEB1;
+.main {
+    font-family: inherit;
+}
+
+
+
+
+
+
+.box {
+    background-color: #DDBEB1;
+    font-family: inherit;
 
     border-radius: 25px;
 
@@ -23,26 +35,27 @@ background-color:#DDBEB1;
     flex-wrap: wrap;
     overflow: hidden;
 
-    justify-content: center;
-    align-items: center;
     text-align: center;
-}
-
-
-.box-title{
-    padding: 5px;
-    margin: auto;
-}
-
-.header-btn{
-    width: 50px;
-    aspect-ratio: 1;
-}
-
-
-.main{
-
     justify-content: center;
-    align-items: center;
+
+    margin: 10px 10px;
 }
 
+
+
+
+
+.container .box-title {
+    padding: 5px;
+}
+
+
+
+
+
+header .header-btn {
+    font-size: 50px;
+    padding: 5px;
+
+    width: 60px;
+}
