@@ -1,0 +1,48 @@
+body {
+    background-color: #819A88;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+.box{
+background-color:#DDBEB1;
+
+    border-radius: 25px;
+
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+.box-title{
+    padding: 5px;
+    margin: auto;
+}
+
+.header-btn{
+    width: 50px;
+    aspect-ratio: 1;
+}
+
+
+.main{
+
+    justify-content: center;
+    align-items: center;
+}
+
