@@ -23,10 +23,11 @@ function rollDice() {
 
 
 function loadGame() {
-    for(i = 1; i<101; i++)
+    for(i = 100; i > 0; i--)
     {
         var temp = document.createElement ("div");
         temp.id = i;
         gameBoard.appendChild(temp);
+        console.log(i);
     }
 }
