@@ -2,6 +2,7 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
+    background-color: #819A88;
 }
 
 .gameboard {
