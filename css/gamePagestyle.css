@@ -93,7 +93,7 @@ body {
 }
 
 #player {
-    background: blue;
+    background: red;
     position: relative;
     z-index: 9000;
     width: 108px;

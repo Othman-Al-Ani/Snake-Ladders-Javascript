@@ -59,7 +59,8 @@ header .header-btn-volume, .header-btn-question {
 
     height: 150px;
     width: 60vw;
-    padding: 0px 10vw;
+    min-width: 410px;
+    padding: 0px 10px;
 
     text-align: center;
     align-items: center;
@@ -67,7 +68,7 @@ header .header-btn-volume, .header-btn-question {
 }
 
 .content .box-SnL h1 {
-    line-height: normal;
+    line-height: 38px;
     margin: 0px;
     padding: 0px;
 
@@ -83,8 +84,13 @@ header .header-btn-volume, .header-btn-question {
     text-align: center;
     align-items: center;
     justify-content: center;
+
+    font-size: 50px;
 }
 
+.box-play span {
+    margin: 0px 15px 0px 0px;
+}
 
 
 .break {
@@ -124,8 +130,44 @@ header .header-btn-volume, .header-btn-question {
     border-radius: 25px;
 
     padding: 20px;
-    border: solid 10px black;
+    border: solid 10px #eadbdb;
     box-shadow: 2px 2px 10px rgb(65, 64, 64);
    
    
+}
+
+#play-settings {
+    position: relative;
+    top: 10px;
+    width: 40vw;
+    height: 270px;
+    text-align: center;
+
+    margin: auto;
+    
+    background-color: #DDBEB1;
+    border-radius: 25px;
+
+    padding: 20px;
+    border: solid 10px #eadbdb;
+    box-shadow: 2px 2px 10px rgb(65, 64, 64);  
+}
+
+#play-settings h1 {
+    text-decoration: underline 1px;
+    margin: 0px 0px 15px 0px;
+}
+
+#play-settings span {
+    font-size: 24px;
+    padding: 5px 15px;
+    border: 2px solid #ead2d2;
+    border-radius: 15px;
+    box-shadow: 1px 1px 5px #ead2d2;
+    margin: 0px 4px;
+}
+
+#play-settings h2 {
+    text-decoration: underline 1px;
+    margin: 20px 0px 15px 0px;
 }
