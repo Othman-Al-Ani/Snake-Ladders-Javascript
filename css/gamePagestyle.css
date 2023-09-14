@@ -3,6 +3,7 @@ body {
     padding: 0;
     display: flex;
     background-color: #819A88;
+    overflow: hidden;
 }
 
 #gameboard {
@@ -63,15 +64,23 @@ body {
     color: white;
 }
 
-.settings button {
+.settings button, .settings a {
     width: 50%;
     height: 50px;
     margin-inline: auto;
     margin-top: 15px;
     border-radius: 15px;
+    background-color:red;
+    text-decoration: none;
+    color:black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border:1px solid black;
 }
 
-.settings button:hover {
+
+.settings a:hover {
     background-color: aqua;
 }
 
