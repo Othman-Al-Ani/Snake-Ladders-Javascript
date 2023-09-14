@@ -20,9 +20,14 @@ body {
 
 }
 
-#gameboard div {
+#gameboard .cell {
     width: 108px;
     height: 108px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+    
 }
 
 .dice {
@@ -92,11 +97,34 @@ body {
     background-color: aqua;
 }
 
-#player {
+#player1 {
     background: red;
     position: relative;
     z-index: 9000;
-    width: 108px;
-    height: 108px;
+ 
+    border-radius: 55px;
+}
+
+#player2{
+    background: blue;
+    position: relative;
+    z-index: 9000;
+
+    border-radius: 55px;
+}
+
+#player3{
+    background: green;
+    position: relative;
+    z-index: 9000;
+
+    border-radius: 55px;
+}
+
+#player4{
+    background: yellow;
+    position: relative;
+    z-index: 9000;
+
     border-radius: 55px;
 }

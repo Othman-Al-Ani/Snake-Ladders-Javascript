@@ -1,10 +1,12 @@
+/* Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+/*----- Genaral HTML for index.html ---------------------*/
 
 body {
     background-color: #819A88;
     color: #fff;
     font-family: 'Indie Flower', cursive;
-
 }
 
 a {
@@ -20,40 +22,114 @@ a:hover {
     font-family: inherit;
 }
 
+.hide {
+    display: none;
+}
+
+.box {
+    background-color: #DDBEB1;
+    font-family: inherit;
+    border-radius: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    margin: 10px 10px;
+}
 
 
 
-header .box-btn-volume, .box-btn-question {
+/*----- Header ------------------------------------------*/
+
+header .box-btn-volume,
+.box-btn-question {
     width: 6vw;
     min-width: 70px;
     height: 6vw;
     min-height: 70px;
-
     align-items: center;
     justify-content: center;
 }
 
-header .header-btn-volume, .header-btn-question {
+header .header-btn-volume,
+.header-btn-question {
     font-size: 70px;
-
     background-color: #DDBEB1;
     border: none;
 }
 
+/* Pop up with info about the game css */
+#tutorial {
+    position: absolute;
+    right: 8vw;
+    top: 70px;
+    width: 40vw;
+    height: 50vh;
+    max-height: 500px;
+    text-align: center;
+    background-color: #DDBEB1;
+    border-radius: 25px;
+    padding: 20px;
+    border: solid 10px #eadbdb;
+    box-shadow: 2px 2px 10px rgb(65, 64, 64);
+}
 
-.hide{
-    display: none ;
+/* Pop up Whit select player settings css*/
+#play-settings {
+    position: relative;
+    top: 10px;
+    width: 40vw;
+    height: 270px;
+    text-align: center;
+
+    margin: auto;
+
+    background-color: #DDBEB1;
+    border-radius: 25px;
+
+    padding: 20px;
+    border: solid 10px #eadbdb;
+    box-shadow: 2px 2px 10px rgb(65, 64, 64);
+}
+
+#play-settings h1 {
+    text-decoration: underline 1px;
+    margin: 0px 0px 15px 0px;
+}
+
+#play-settings .play-whit-friends span {
+    font-size: 24px;
+    padding: 5px 15px;
+    border: 2px solid #ead2d2;
+    border-radius: 15px;
+    box-shadow: 1px 1px 5px #ead2d2;
+    margin: 0px 4px 10px;
+}
+
+#play-settings .play-whit-computer {
+    margin: 25px 0px 0px 0px;
+}
+
+#play-settings .play-whit-computer span {
+    font-size: 34px;
+    text-decoration: underline 2px #ebd7d7;
+    padding: 5px 15px;
+    border: 2px solid #ead2d2;
+    border-radius: 15px;
+    box-shadow: 1px 1px 5px #ead2d2;
 }
 
 
 
+/*----- Content -----------------------------------------*/
+
 .content {
     height: 80vh;
-    padding: 3vh 60px 0px;
+    padding: 1vh 10vw 0px;
 
     justify-content: center;
 }
 
+/* Game title css */
 .content .box-SnL {
     margin: 10px auto 10vh;
 
@@ -67,19 +143,21 @@ header .header-btn-volume, .header-btn-question {
     justify-content: center;
 }
 
-.content .box-SnL h1 {
+.content .box-SnL span {
     line-height: 38px;
     margin: 0px;
     padding: 0px;
 
-    font-size: 45px;
+    font-size: 75px;
 }
 
+/* Play button css */
 .content .box-play {
     margin: 10vh auto 10px;
     height: 150px;
     width: 30vw;
-    padding: 0px 10vw;
+    min-width: 200px;
+    padding: 0px 20px;
 
     text-align: center;
     align-items: center;
@@ -88,86 +166,24 @@ header .header-btn-volume, .header-btn-question {
     font-size: 50px;
 }
 
-.box-play span {
+.content .box-play span {
     margin: 0px 15px 0px 0px;
 }
 
 
-.break {
-    width: 100vw;
-    margin: 0px;
 
-}
+/*----- Images at the bottom ----------------------------*/
 
-
-.box {
-    background-color: #DDBEB1;
-    font-family: inherit;
-
-    border-radius: 25px;
-
-    display: flex;
-    flex-wrap: wrap;
-    overflow: hidden;
-
-    margin: 10px 10px;
-}
-
-.content .box-title {
-    padding: 5px;
-}
-
-
-#tutorial{
+.snake-image {
     position: absolute;
-    right: 8vw;
-    top: 70px;
-    width: 40vw;
-    height: 50vh;
-    text-align: center;
-    
-    background-color: #DDBEB1;
-    border-radius: 25px;
-
-    padding: 20px;
-    border: solid 10px #eadbdb;
-    box-shadow: 2px 2px 10px rgb(65, 64, 64);
-   
-   
+    bottom: 20px;
+    left: 10px;
 }
 
-#play-settings {
-    position: relative;
-    top: 10px;
-    width: 40vw;
-    height: 270px;
-    text-align: center;
 
-    margin: auto;
-    
-    background-color: #DDBEB1;
-    border-radius: 25px;
 
-    padding: 20px;
-    border: solid 10px #eadbdb;
-    box-shadow: 2px 2px 10px rgb(65, 64, 64);  
-}
-
-#play-settings h1 {
-    text-decoration: underline 1px;
-    margin: 0px 0px 15px 0px;
-}
-
-#play-settings span {
-    font-size: 24px;
-    padding: 5px 15px;
-    border: 2px solid #ead2d2;
-    border-radius: 15px;
-    box-shadow: 1px 1px 5px #ead2d2;
-    margin: 0px 4px;
-}
-
-#play-settings h2 {
-    text-decoration: underline 1px;
-    margin: 20px 0px 15px 0px;
+.ladder-image {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
 }

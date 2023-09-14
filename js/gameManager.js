@@ -1,4 +1,3 @@
-const playerAmount = (new URLSearchParams(window.location.search)).get("category");
 
 function delay(ms) {
     return new Promise(resolve => {
@@ -65,10 +64,8 @@ let SnakesAndLadders = [
 
 
 
-let playerPosArr = [1,1,1,1];
-playerPosArr.pop();
-console.log(playerPosArr);
-    
+let playerPosArr = [];
+
     //Default player position
 
 var currentlyMoving = false;    // Variable to not allow the dice to be spammed and allow animation to play.
@@ -77,7 +74,7 @@ var diceImg = document.getElementById("diceImg");
 var gameBoard = document.getElementById("gameboard");
 
 
-var playerTurn = 1;     //Players turn var
+var playerTurn = 0;     //Players turn var
 
 diceImg.addEventListener('click', rollDice);
 
@@ -93,16 +90,13 @@ function rollDice() {
 
     if (rand < 6) {
         playerTurn++;
-    }else {
-        playerTurn = playerTurn;
-        console.log("Yeet")
+        if (playerTurn == playerPosArr.length-1) {
+            playerTurn = 0;
+        }
     }
-
-    if (playerTurn > playerAmount) {
-        playerTurn = 1;
-    }
-    document.getElementById("playerH1").innerHTML = "Player " + playerTurn + "'s turn";
+    document.getElementById("playerH1").innerHTML = "Player " + (playerTurn + 1) + "'s turn";
     console.log(playerTurn);
+
     return rand;
 
 
@@ -111,49 +105,69 @@ function rollDice() {
 
 function loadGame() {
 
-    for (i = 100; i > 0; i--) {
+    const playerAmount = (new URLSearchParams(window.location.search)).get("category");
 
-    }
     var firstDiv = document.getElementById("1");
-    var player = document.createElement("div");
-    player.id = "player";
-    firstDiv.appendChild(player);
+
+  
+    for (i=0; i<= playerAmount; i++) {
+
+        var player = document.createElement("div");
+        player.id = "player"+(i+1);
+        firstDiv.appendChild(player);
+
+        playerPosArr.push(1);
+
+      
+    }
+
+
+
+    
 
 }
 
 //Moving the player || Animating the movement for player
 async function movePlayerDelay(value) {
-    await delay(500);
     for (i = 1; i <= value; i++) {
         var div = document.getElementById(playerPosArr[playerTurn]);
+        console.log("DIV", div);
         var nextDiv = document.getElementById(playerPosArr[playerTurn] + 1);
-        console.log(playerPosArr[playerTurn])
-        await delay(200); // This will pause execution for 2000 milliseconds (2 seconds)
+        console.log("NEXT DIV", nextDiv);
+        await delay(200); // This will pause execution for 200 milliseconds (0.2 seconds)
         //Delete player div from cell
-        div.innerHTML = " ";
+        var playerNameID = "player"+(playerTurn+1);
+        console.log("PLAYER NAME ID", playerNameID);
+        console.log("REMOVED", document.getElementById(playerNameID));
 
+        div.removeChild(document.getElementById(playerNameID));
         var newPlayerDiv = document.createElement("div");
-        newPlayerDiv.id = "player";
+        console.log("NEW PLAYER DIV", newPlayerDiv)
+        
+        newPlayerDiv.id = playerNameID;
         nextDiv.appendChild(newPlayerDiv);
         playerPosArr[playerTurn]++;
+        console.log("Curr turn:" + playerTurn);
 
     }
+    console.log("--------------");
+    console.log(playerPosArr);
     for (j = 0; j < SnakesAndLadders.length; j++) {
         if (playerPosArr[playerTurn] == SnakesAndLadders[j].pos) {
             var div = document.getElementById(playerPosArr[playerTurn]);
-            div.innerHTML = " ";
+            var playerNameID = "player"+(playerTurn+1);
+            div.removeChild(document.getElementById(playerNameID));
 
             playerPosArr[playerTurn] = SnakesAndLadders[j].goto;
 
             var div = document.getElementById(playerPosArr[playerTurn]);
 
             var newPlayerDiv = document.createElement("div");
-            newPlayerDiv.id = "player";
+            newPlayerDiv.id = playerNameID;
             div.appendChild(newPlayerDiv);
         }
     }
 
-    console.log("Final" + playerPosArr[playerTurn]);
     currentlyMoving = false;
 
 }

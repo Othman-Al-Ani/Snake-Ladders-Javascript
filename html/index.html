@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Start - Snakes and Ladders</title>
 
     <!-- Boxicons -->
@@ -25,78 +26,93 @@
 
 <body>
 
+    <!-- Main - All html in index page -->
     <div class="main">
 
+        <!-- Header html - Volume/music option button and Tutorial toggle button -->
         <header id="header" class="d-flex justify-content-between">
+
+            <!-- When clicked it changes icon witch indicates volume on/of, and turn on/of sounds -->
             <div id="volume" class="box box-btn-volume">
                 <i id="volume-change" class='bx bx-volume-full header-btn-volume'></i>
-                <!-- <i class='bx bxs-volume-mute'></i> -->
             </div>
 
+            <!-- When clicked it display a pop up with information about the game -->
             <div id="question" class="box box-btn-question">
                 <i class='bx bx-question-mark header-btn-question'>
-
-
                 </i>
             </div>
-        </header>
 
+            <!-- This is the pop up that tells you how to play-->
+            <div id="tutorial" class="hide">
+                <h2> How to Play</h2>
+                <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed,
+                    quae tenetur voluptatem repellendus,
+                    dicta molestias adipisci
+                    iste, ipsa pariatur velit ut consequatur minus officiis nemo vitae rem aut voluptatum eveniet.
+                </p>
+            </div>
+
+        </header> <!-- End header -->
+
+
+        <!-- Content containers -->
         <div class="container-fluid">
             <div class="content">
+
+                <!-- Box for game title -->
                 <div class="box box-SnL">
-                    <h1>Snakes and Ladders</h1>
+                    <span>Snakes and Ladders</span>
                 </div>
 
-                <div id="tutorial" class="hide">
-                    <h2> How to Play</h2>
-
-                    <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed,
-                        quae tenetur voluptatem repellendus,
-                        dicta molestias adipisci
-                        iste, ipsa pariatur velit ut consequatur minus officiis nemo vitae rem aut voluptatum eveniet.
-                    </p>
-                </div>
-
-
-                <div class="break"></div>
-
+                <!-- Box for play button and when clicked displays a select player settings menu -->
                 <div id="play" class="box box-play">
                     <span>Play</span> <i class='bx bx-caret-right-square'></i>
                 </div>
 
-
+                <!-- Select player settings -->
                 <div id="play-settings" class="hide">
                     <h1>Select player amount</h1>
 
-                    <div>
+                    <!-- Play whit friends -->
+                    <div class="play-whit-friends d-flex justify-content-center">
+                        <a href="game.html?category=1">
+                            <div><span>2 players</span></div>
+                        </a>
+
                         <a href="game.html?category=2">
-                            <span>2 players</span>
+                            <div><span>3 players</span></div>
                         </a>
 
                         <a href="game.html?category=3">
-                            <span>3 players</span>
-                        </a>
-
-                        <a href="game.html?category=4">
-                            <span>4 players</span>
+                            <div><span>4 players</span></div>
                         </a>
                     </div>
 
-                    <a href="game.html">
-                        <h2>Play against bot</h2>
-                    </a>
+                    <!-- Play whit computer -->
+                    <div class="play-whit-computer d-flex justify-content-center">
+                        <a href="game.html">
+                            <div><span>Play against bot</span></div>
+                        </a>
+                    </div>
 
+                </div> <!-- End select player settings -->
 
-                </div>
-
-            </div>
+            </div> <!--End content containers -->
+        </div>
+        
+        <div class="snake-image">
+            <img src="../img/Snake.png" alt="Snake image">
         </div>
 
-        <footer id="footer">
+        <div class="ladder-image">
+            <img src="../img/Ladder.jpg" alt="Ladder image">
+        </div>
+        <!-- Footer -->
+        <!-- <footer id="footer"></footer> -->
+        <!-- Footer end -->
 
-        </footer>
-
-    </div>
+    </div> <!-- End main -->
 
 
 
