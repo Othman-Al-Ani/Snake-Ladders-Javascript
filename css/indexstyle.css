@@ -23,6 +23,75 @@ a:hover {
 
 
 
+header .box-btn-volume, .box-btn-question {
+    width: 6vw;
+    min-width: 70px;
+    height: 6vw;
+    min-height: 70px;
+
+    align-items: center;
+    justify-content: center;
+}
+
+header .header-btn-volume, .header-btn-question {
+    font-size: 70px;
+
+    background-color: #DDBEB1;
+    border: none;
+}
+
+
+.hide{
+    display: none ;
+}
+
+
+
+.content {
+    height: 80vh;
+    padding: 3vh 60px 0px;
+
+    justify-content: center;
+}
+
+.content .box-SnL {
+    margin: 10px auto 10vh;
+
+    height: 150px;
+    width: 60vw;
+    padding: 0px 10vw;
+
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.content .box-SnL h1 {
+    line-height: normal;
+    margin: 0px;
+    padding: 0px;
+
+    font-size: 45px;
+}
+
+.content .box-play {
+    margin: 10vh auto 10px;
+    height: 150px;
+    width: 30vw;
+    padding: 0px 10vw;
+
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.break {
+    width: 100vw;
+    margin: 0px;
+
+}
 
 
 .box {
@@ -35,40 +104,28 @@ a:hover {
     flex-wrap: wrap;
     overflow: hidden;
 
-    text-align: center;
-    justify-content: center;
-
     margin: 10px 10px;
 }
 
-
-
-
-
-.container .box-title {
+.content .box-title {
     padding: 5px;
 }
 
 
-
-
-
-header .header-btn-question {
-    font-size: 50px;
-    padding: 5px;
-
-    width: 60px;
-
+#tutorial{
+    position: absolute;
+    right: 8vw;
+    top: 70px;
+    width: 40vw;
+    height: 50vh;
+    text-align: center;
+    
     background-color: #DDBEB1;
-    border: none;
-}
+    border-radius: 25px;
 
-header .header-btn-volume {
-    font-size: 50px;
-    padding: 5px;
-
-    width: 60px;
-
-    background-color: #DDBEB1;
-    border: none;
+    padding: 20px;
+    border: solid 10px black;
+    box-shadow: 2px 2px 10px rgb(65, 64, 64);
+   
+   
 }

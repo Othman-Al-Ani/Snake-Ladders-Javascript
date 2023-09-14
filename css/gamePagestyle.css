@@ -26,8 +26,8 @@ body {
 }
 
 .dice {
-    margin-left: 40px;
-    margin-top: 700px;
+    margin-left: 100px;
+    margin-top: 100px;
     width: 500px;
     height: 500px;
     background: rgb(93, 93, 184);
@@ -53,7 +53,7 @@ body {
     right: 0;
     width: 740px;
     height: 100%;
-    background-color: hotpink;
+    background-color: rgb(25, 67, 30);
     margin-bottom: 125px;
 }
 
@@ -78,14 +78,23 @@ body {
     align-items: center;
     border:1px solid black;
 }
+.gameButtons{
+    padding-bottom: 80px;
+    
+}
+.playersTurn{
+    border-bottom: 1px solid white;
+    border-top: 1px solid white;
+}
 
 
 .settings a:hover {
     background-color: aqua;
 }
 
-.player {
+#player {
     background: blue;
+    position: relative;
     z-index: 9000;
     width: 108px;
     height: 108px;

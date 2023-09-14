@@ -28,25 +28,51 @@
     <div class="main">
 
         <header id="header" class="d-flex justify-content-between">
-            <div class="box">
+            <div class="box box-btn-volume">
                 <i id="volume" class='bx bx-volume-full header-btn-volume'></i>
                 <!-- <i class='bx bxs-volume-mute'></i> -->
             </div>
 
-            <div class="box">
-                <i class='bx bx-question-mark header-btn-question'></i>
+            <div class="box box-btn-question">
+                <i id="question" class='bx bx-question-mark header-btn-question'></i>
             </div>
         </header>
 
-        <div class="container">
-            <div class="box">
-                <h1>Snakes and Ladders</h1>
-            </div>
-            <a href="game.html">
-                <div class="box">
+        <div class="container-fluid">
+            <div class="content">
+                <div class="box box-SnL">
+                    <h1>Snakes and Ladders</h1>
+                </div>
+
+                <div id="tutorial" class="hide"> 
+                        <h2> How to Play</h2>
+
+                        <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed,
+                             quae tenetur voluptatem repellendus, 
+                            dicta molestias adipisci  
+                            iste, ipsa pariatur velit ut consequatur minus officiis nemo vitae rem aut voluptatum eveniet.</p>
+                </div>
+            
+
+                <div class="break"></div>
+
+                <div id="play" class="box box-play">
                     <h1>play</h1>
                 </div>
-            </a>
+
+                
+                    <div id="play-settings" class="hide">
+                        <h1>Select player amount</h1> 
+                        <a href="game.html"><h3>2 players</h3></a>
+                        <a href="game.html"><h3>3 players</h3></a>
+                        <a href="game.html"><h3>4 players</h3></a>
+
+                        <a href="game.html"><h1>Play against bot</h1></a>
+
+
+                    </div>
+                
+            </div>
         </div>
 
         <footer id="footer">
@@ -55,11 +81,12 @@
 
     </div>
 
+  
 
 
     <script src="../js/ui.js"></script>
 </body>
 <!-- <i class='bx bx-user'></i> -->
-<!-- <i class='bx bxs-user'></i> -->
+<!-- <i class='bx bxs-user'></i> --> 
 
 </html>
