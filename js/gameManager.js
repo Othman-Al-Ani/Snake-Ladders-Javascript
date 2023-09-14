@@ -88,12 +88,7 @@ function rollDice() {
     movePlayerDelay(rand);
     currentlyMoving = true;
 
-    if (rand < 6) {
-        playerTurn++;
-        if (playerTurn == playerPosArr.length-1) {
-            playerTurn = 0;
-        }
-    }
+  
     document.getElementById("playerH1").innerHTML = "Player " + (playerTurn + 1) + "'s turn";
     console.log(playerTurn);
 
@@ -167,7 +162,16 @@ async function movePlayerDelay(value) {
             div.appendChild(newPlayerDiv);
         }
     }
+    if(value != 6){
+        // Move the playerTurn increment here.
+        playerTurn++;
 
+        // Ensure playerTurn cycles back to 0 when it exceeds the number of players.
+        if (playerTurn >= playerPosArr.length) {
+            playerTurn = 0;
+        }
+    }
+    
     currentlyMoving = false;
 
 }
