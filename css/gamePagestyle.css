@@ -9,23 +9,26 @@ body {
 #gameboard {
     display: flex;
     flex-wrap: wrap;
-    width: 1080px;
+    width: 1250px;
+    height: 1250px;
     background-image: url('../img/snakes-ladders-background.avif');
     background-position: center;
     background-size: cover;
 
-    margin: 125px;
-    margin-right: 0px;
-
+    margin-top: 20px;
+    margin-left: 70px;
+    
 
 }
 
 #gameboard .cell {
-    width: 108px;
-    height: 108px;
-    display: grid;
+    width: 125px;
+    height: 125px;
+    display: flex;
+    flex-wrap: wrap;
+    /*display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;*/
 
     
 }
@@ -102,18 +105,23 @@ body {
     background: red;
     position: relative;
     z-index: 9000;
- 
+    width: 50px;
+    height: 50px;
     border-radius: 55px;
 
     box-shadow: 1px 1px 5px black;
     border:5px dashed black;
+
+    flex-grow: 0.5;
+
 }
 
 #player2{
     background: blue;
     position: relative;
     z-index: 9000;
-
+    width: 50px;
+    height: 50px;
     border-radius: 55px;
 
     box-shadow: 1px 1px 5px black;
@@ -124,7 +132,8 @@ body {
     background: green;
     position: relative;
     z-index: 9000;
-
+    width: 50px;
+    height: 50px;
     border-radius: 55px;
 
     box-shadow: 1px 1px 5px black;
@@ -135,7 +144,8 @@ body {
     background: yellow;
     position: relative;
     z-index: 9000;
-
+    width: 50px;
+    height: 50px;
     border-radius: 55px;
 
     box-shadow: 1px 1px 5px black;
