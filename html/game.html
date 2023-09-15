@@ -6,11 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/indexstyle.css">
     <link rel="stylesheet" href="../css/gamePagestyle.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
 
     <title>Start - Snakes and Ladders</title>
 </head>
 
 <body onload="loadGame(); initGamePage(); initIndexPage();">
+    <header id="header" class="d-flex justify-content-between">
+    <div id="volume" class="box box-btn-volume">
+        <i id="volume-change" class='bx bx-volume-full header-btn-volume'></i>
+    </div>
+    </header>
+
     <div id="gameboard">
         <div class="cell" id="100"></div>
         <div class="cell" id="99"></div>
