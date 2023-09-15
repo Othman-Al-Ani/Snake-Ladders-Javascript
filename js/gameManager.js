@@ -63,10 +63,9 @@ let SnakesAndLadders = [
 ]
 
 
-
+//Default player position
 let playerPosArr = [];
 
-//Default player position
 
 var currentlyMoving = false;    // Variable to not allow the dice to be spammed and allow animation to play.
 
@@ -76,8 +75,8 @@ var gameBoard = document.getElementById("gameboard");
 
 var playerTurn = 0;     //Players turn var
 
-diceImg.addEventListener('click', throwDice);
-
+//How fast does player move from one div to another [miliseconds]
+var movingSpeed = 200;
 
 
 
@@ -103,26 +102,56 @@ function loadGame() {
         // Initialize the player's position array with a starting position of 1.
         playerPosArr.push(1);
     }
+
+    diceImg.addEventListener('click', throwDice);
+
+    
+
 }
 
 // The dice rolling function. || Triggers when pressing the dice img
 async function throwDice() {
+    // If a player is currently moving, exit the function to prevent multiple moves.
     if (currentlyMoving) return;
+
+    // Generate a random number between 1 and 6 to simulate the dice roll.
     var rand = Math.floor(Math.random() * 6 + 1);
+
+    // Change the source of the dice image to a loading animation.
     diceImg.src = "../Dices/dice-gif.gif";
+
+    // Generate a random delay time between 300 and 800 milliseconds.
     var alpha = Math.floor(Math.random() * 800 + 300);
-    //console.log(alpha)
+
+    // Pause execution for the generated delay time.
     await delay(alpha);
+
+    // Change the source of the dice image to display the rolled number.
     diceImg.src = "../Dices/Dice" + rand + ".svg";
-    movePlayerDelay(rand);
-    currentlyMoving = true;
 
+    // Check if moving the player would exceed the game board's size (100 cells).
+    if ((playerPosArr[playerTurn] + rand) > 100) {
+        // Move to the next player's turn.
+        playerTurn++;
 
-    document.getElementById("playerH1").innerHTML = "Player " + (playerTurn + 1) + "'s turn";
-    console.log(playerTurn);
+        // Ensure playerTurn cycles back to 0 when it exceeds the number of players.
+        if (playerTurn >= playerPosArr.length) {
+            playerTurn = 0;
+        }
+    } else {
+        // Move the player by calling the 'movePlayerDelay' function with the rolled value.
+        movePlayerDelay(rand);
 
+        // Set the 'currentlyMoving' flag to indicate that a player is currently moving.
+        currentlyMoving = true;
+    }
+
+    
+
+    // Return the rolled dice value.
     return rand;
 }
+
 
 
 //Moving the player || Animating the movement for player
@@ -135,8 +164,8 @@ async function movePlayerDelay(value) {
         // Get the next cell element where the player will move.
         var nextDiv = document.getElementById(playerPosArr[playerTurn] + 1);
         
-        // Pause execution for 200 milliseconds (0.2 seconds).
-        await delay(200);
+        // Pause execution
+        await delay(movingSpeed);
 
         // Remove the player's div element from the current cell.
         var playerNameID = "player" + (playerTurn + 1);
@@ -175,7 +204,9 @@ async function movePlayerDelay(value) {
             div.appendChild(newPlayerDiv);
         }
     }
-
+    if(playerPosArr[playerTurn] == 100){
+        playerWon();
+    }
     // If the player didn't roll a 6, increment the playerTurn.
     if (value != 6) {
         playerTurn++;
@@ -185,9 +216,14 @@ async function movePlayerDelay(value) {
             playerTurn = 0;
         }
     }
-
+    // Update the HTML element to indicate whose turn it is.
+    document.getElementById("playerH1").innerHTML = "Player " + (playerTurn + 1) + "'s turn";
+    
     // Set a flag to indicate that player movement has finished.
     currentlyMoving = false;
 }
-
+function playerWon(){
+    console.log("Player with value: "+playerTurn+" won");
+    diceImg.style.display = "none";
+}
 

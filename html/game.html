@@ -5,10 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/gamePagestyle.css">
+    <link rel="stylesheet" href="../css/indexstyle.css .css">
     <title>Start - Snakes and Ladders</title>
 </head>
 
-<body onload="loadGame()">
+<body onload="loadGame(); initGamePage();">
     <div id="gameboard">
         <div class="cell" id="100"></div>
         <div class="cell" id="99"></div>
@@ -117,8 +118,8 @@
         <div class="gameButtons">
             <h1>Snakes & Ladders</h1>
             <a href="index.html">New Game</a>
-            <a href="index.html">Restart</a>
-            <a href="index.html">Tutorial</a>
+            <a id = "restartBtn">Restart</a>
+            <a id = "tutorialBtn">Tutorial</a>
         </div>
         <div class="playersTurn">
 
@@ -130,4 +131,5 @@
         </div>
     </div>
     <script src="../js/gameManager.js"></script>
+    <script src="../js/ui.js"></script>
 </body>
