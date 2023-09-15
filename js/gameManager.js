@@ -219,6 +219,19 @@ async function movePlayerDelay(value) {
     }
     // Update the HTML element to indicate whose turn it is.
     document.getElementById("playerH1").innerHTML = "Player " + (playerTurn + 1) + "'s turn";
+
+    if (playerTurn == 0) {
+        document.getElementById("coloredBox").style.backgroundColor = "red";
+    } else if (playerTurn == 1) {
+        document.getElementById("coloredBox").style.backgroundColor = "blue";
+    } else if (playerTurn == 2) {
+        document.getElementById("coloredBox").style.backgroundColor = "green";
+    } else if (playerTurn == 3) {
+        document.getElementById("coloredBox").style.backgroundColor = "yellow";
+    }else {
+        document.getElementById("coloredBox").style.backgroundColor = "white";
+    }
+
     var player = document.getElementById("player"+(playerTurn+1));
     player.classList.toggle("active");
     // Set a flag to indicate that player movement has finished.
