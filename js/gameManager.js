@@ -105,6 +105,8 @@ function loadGame() {
 
     diceImg.addEventListener('click', throwDice);
 
+    
+
 }
 
 // The dice rolling function. || Triggers when pressing the dice img
@@ -144,8 +146,7 @@ async function throwDice() {
         currentlyMoving = true;
     }
 
-    // Update the HTML element to indicate whose turn it is.
-    document.getElementById("playerH1").innerHTML = "Player " + (playerTurn + 1) + "'s turn";
+    
 
     // Return the rolled dice value.
     return rand;
@@ -215,7 +216,9 @@ async function movePlayerDelay(value) {
             playerTurn = 0;
         }
     }
-
+    // Update the HTML element to indicate whose turn it is.
+    document.getElementById("playerH1").innerHTML = "Player " + (playerTurn + 1) + "'s turn";
+    
     // Set a flag to indicate that player movement has finished.
     currentlyMoving = false;
 }
