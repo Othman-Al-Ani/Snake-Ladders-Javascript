@@ -6,11 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/indexstyle.css">
     <link rel="stylesheet" href="../css/gamePagestyle.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
 
     <title>Start - Snakes and Ladders</title>
 </head>
 
 <body onload="loadGame(); initGamePage(); initIndexPage();">
+    <header id="header" class="d-flex justify-content-between">
+    <div id="volume" class="box box-btn-volume">
+        <i id="volume-change" class='bx bx-volume-full header-btn-volume'></i>
+    </div>
+    </header>
+
     <div id="gameboard">
         <div class="cell" id="100"></div>
         <div class="cell" id="99"></div>
@@ -112,35 +120,41 @@
         <div class="cell" id="8"></div>
         <div class="cell" id="9"></div>
         <div class="cell" id="10"></div>
-        
+
     </div>
     <!-- This is the pop up that tells you how to play-->
     <div id="tutorial" class="hide">
         <h1> How to Play</h1>
         <h2>Ladders:</h2>
-        <p>If your game piece lands on the base of a ladder, move it to the square where the ladder ends. Climb the ladder to progress quickly!</p>
+        <p>If your game piece lands on the base of a ladder, move it to the square where the ladder ends. Climb the
+            ladder to progress quickly!</p>
 
         <h2>Snakes:</h2>
-        <p>If your game piece lands on the head of a snake, move it to the square where the snake's tail is located. Beware of the snakes; they can set you back!</p>
+        <p>If your game piece lands on the head of a snake, move it to the square where the snake's tail is located.
+            Beware of the snakes; they can set you back!</p>
 
         <h2>Extra Roll:</h2>
-        <p>If you roll a 6 on the dice, you get an extra roll. Take advantage of this to reach the final square faster.</p>
+        <p>If you roll a 6 on the dice, you get an extra roll. Take advantage of this to reach the final square faster.
+        </p>
 
         <h2>Winning:</h2>
         <p>The first player to land exactly on the final square wins the game!</p>
-        
+
     </div>
     <div class="settings">
         <div class="gameButtons">
             <h1>Snakes & Ladders</h1>
             <a href="index.html">New Game</a>
-            <a id = "restartBtn">Restart</a>
-            <a id = "question">Tutorial</a>
+            <a id="restartBtn">Restart</a>
+            <a id="question">Tutorial</a>
         </div>
-        <div class="playersTurn">
+        <div class="playersTurn" style="display: flex; flex-direction: row;" >
 
+            <div id="coloredBox"
+                style="height: 100px; width: 100px; background-color: red; margin-top: 20px; margin-left: 100px; border-radius: 10px;">
+            </div>
             <h1 id="playerH1">Player 1's turn</h1>
-            
+
         </div>
         <div class="dice">
             <img id="diceImg" src="../Dices/Dice1.svg" alt="dice1">

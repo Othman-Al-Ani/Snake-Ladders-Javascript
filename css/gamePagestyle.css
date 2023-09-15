@@ -109,7 +109,7 @@ body {
     height: 50px;
     border-radius: 55px;
 
-    box-shadow: 1px 1px 5px black;
+    box-shadow: 1px 1px 8px black;
     border:5px dashed black;
 
     flex-grow: 0.5;
@@ -124,7 +124,7 @@ body {
     height: 50px;
     border-radius: 55px;
 
-    box-shadow: 1px 1px 5px black;
+    box-shadow: 1px 1px 8px black;
     border:5px dashed black;
 }
 
@@ -136,7 +136,7 @@ body {
     height: 50px;
     border-radius: 55px;
 
-    box-shadow: 1px 1px 5px black;
+    box-shadow: 1px 1px 8px black;
     border:5px dashed black;
 }
 
@@ -148,7 +148,7 @@ body {
     height: 50px;
     border-radius: 55px;
 
-    box-shadow: 1px 1px 5px black;
+    box-shadow: 1px 1px 8px black;
     border:5px dashed black;
 }
 
@@ -159,6 +159,5 @@ body {
 }
 
 .active{
-    box-shadow: 1px 1px 5px black;
     border: 6px dashed !important;
 }
