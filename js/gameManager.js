@@ -78,14 +78,7 @@ var playerTurn = 0;     //Players turn var
 
 diceImg.addEventListener('click', throwDice);
 
-  
-    document.getElementById("playerH1").innerHTML = "Player " + (playerTurn + 1) + "'s turn";
-    console.log(playerTurn);
 
-    return rand;
-
-
-}
 
 
 // This function loads the game and initializes player elements.
