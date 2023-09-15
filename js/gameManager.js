@@ -105,7 +105,8 @@ function loadGame() {
 
     diceImg.addEventListener('click', throwDice);
 
-    
+    var player = document.getElementById("player"+(playerTurn+1));
+    player.classList.toggle("active");
 
 }
 
@@ -218,7 +219,8 @@ async function movePlayerDelay(value) {
     }
     // Update the HTML element to indicate whose turn it is.
     document.getElementById("playerH1").innerHTML = "Player " + (playerTurn + 1) + "'s turn";
-    
+    var player = document.getElementById("player"+(playerTurn+1));
+    player.classList.toggle("active");
     // Set a flag to indicate that player movement has finished.
     currentlyMoving = false;
 }
