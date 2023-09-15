@@ -104,6 +104,9 @@ body {
     z-index: 9000;
  
     border-radius: 55px;
+
+    box-shadow: 1px 1px 5px black;
+    border:5px dashed black;
 }
 
 #player2{
@@ -112,6 +115,9 @@ body {
     z-index: 9000;
 
     border-radius: 55px;
+
+    box-shadow: 1px 1px 5px black;
+    border:5px dashed black;
 }
 
 #player3{
@@ -120,6 +126,9 @@ body {
     z-index: 9000;
 
     border-radius: 55px;
+
+    box-shadow: 1px 1px 5px black;
+    border:5px dashed black;
 }
 
 #player4{
@@ -128,6 +137,9 @@ body {
     z-index: 9000;
 
     border-radius: 55px;
+
+    box-shadow: 1px 1px 5px black;
+    border:5px dashed black;
 }
 
 /*Overwrite for tutorial popup position*/
@@ -135,6 +147,8 @@ body {
     right: 30vw;
     height: fit-content;
 }
+
 .active{
-    border:5px solid black;
+    box-shadow: 1px 1px 5px black;
+    border: 6px dashed !important;
 }
