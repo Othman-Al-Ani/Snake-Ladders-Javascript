@@ -8,6 +8,11 @@ function initGamePage(){
     document.getElementById("restartBtn").addEventListener("click", restartGame);
 
 }
+
+
+
+
+
 function mute() {
     var element = document.getElementById("volume-change");
 
