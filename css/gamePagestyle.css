@@ -69,7 +69,7 @@ body {
     color: white;
 }
 
-.settings button, .settings a {
+.settings a {
     width: 50%;
     height: 50px;
     margin-inline: auto;
@@ -82,6 +82,7 @@ body {
     justify-content: center;
     align-items: center;
     border:1px solid black;
+    font-size: 2rem;
 }
 .gameButtons{
     padding-bottom: 80px;
@@ -127,4 +128,13 @@ body {
     z-index: 9000;
 
     border-radius: 55px;
+}
+
+/*Overwrite for tutorial popup position*/
+#tutorial{
+    right: 30vw;
+    height: fit-content;
+}
+.active{
+    border:5px solid black;
 }
