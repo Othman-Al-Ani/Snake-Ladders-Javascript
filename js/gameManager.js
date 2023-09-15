@@ -78,29 +78,38 @@ var playerTurn = 0;     //Players turn var
 
 diceImg.addEventListener('click', throwDice);
 
+  
+    document.getElementById("playerH1").innerHTML = "Player " + (playerTurn + 1) + "'s turn";
+    console.log(playerTurn);
 
+    return rand;
+
+
+}
+
+
+// This function loads the game and initializes player elements.
 function loadGame() {
-
+    // Get the 'category' parameter from the URL query string (assuming it represents the number of players).
     const playerAmount = (new URLSearchParams(window.location.search)).get("category");
 
+    // Get the first cell element with an ID of "1".
     var firstDiv = document.getElementById("1");
 
-
+    // Loop to create player elements based on the specified playerAmount.
     for (i = 0; i <= playerAmount; i++) {
-
+        // Create a new div element for a player.
         var player = document.createElement("div");
+
+        // Set the ID of the player div with a unique identifier (e.g., "player1", "player2", ...).
         player.id = "player" + (i + 1);
+
+        // Append the player div to the first cell (cell with ID "1").
         firstDiv.appendChild(player);
 
+        // Initialize the player's position array with a starting position of 1.
         playerPosArr.push(1);
-
-
     }
-
-
-
-
-
 }
 
 // The dice rolling function. || Triggers when pressing the dice img
@@ -125,46 +134,57 @@ async function throwDice() {
 
 //Moving the player || Animating the movement for player
 async function movePlayerDelay(value) {
+    // Loop from 1 to the specified 'value'.
     for (i = 1; i <= value; i++) {
+        // Get the current player's position cell element by its ID.
         var div = document.getElementById(playerPosArr[playerTurn]);
-        console.log("DIV", div);
+        
+        // Get the next cell element where the player will move.
         var nextDiv = document.getElementById(playerPosArr[playerTurn] + 1);
-        console.log("NEXT DIV", nextDiv);
-        await delay(200); // This will pause execution for 200 milliseconds (0.2 seconds)
-        //Delete player div from cell
+        
+        // Pause execution for 200 milliseconds (0.2 seconds).
+        await delay(200);
+
+        // Remove the player's div element from the current cell.
         var playerNameID = "player" + (playerTurn + 1);
-        console.log("PLAYER NAME ID", playerNameID);
-        console.log("REMOVED", document.getElementById(playerNameID));
-
         div.removeChild(document.getElementById(playerNameID));
+
+        // Create a new div for the player.
         var newPlayerDiv = document.createElement("div");
-        console.log("NEW PLAYER DIV", newPlayerDiv)
-
         newPlayerDiv.id = playerNameID;
+        
+        // Append the new player div to the next cell.
         nextDiv.appendChild(newPlayerDiv);
+        
+        // Update the player's position in the array.
         playerPosArr[playerTurn]++;
-        console.log("Curr turn:" + playerTurn);
-
     }
-    console.log("--------------");
-    console.log(playerPosArr);
+
+    // Check if the player landed on a snake or ladder.
     for (j = 0; j < SnakesAndLadders.length; j++) {
         if (playerPosArr[playerTurn] == SnakesAndLadders[j].pos) {
+            // Remove the player's div from the current cell.
             var div = document.getElementById(playerPosArr[playerTurn]);
             var playerNameID = "player" + (playerTurn + 1);
             div.removeChild(document.getElementById(playerNameID));
 
+            // Update the player's position to the designated position from the snake or ladder.
             playerPosArr[playerTurn] = SnakesAndLadders[j].goto;
 
+            // Get the new cell where the player landed.
             var div = document.getElementById(playerPosArr[playerTurn]);
 
+            // Create a new player div and set its ID.
             var newPlayerDiv = document.createElement("div");
             newPlayerDiv.id = playerNameID;
+
+            // Append the new player div to the new cell.
             div.appendChild(newPlayerDiv);
         }
     }
+
+    // If the player didn't roll a 6, increment the playerTurn.
     if (value != 6) {
-        // Move the playerTurn increment here.
         playerTurn++;
 
         // Ensure playerTurn cycles back to 0 when it exceeds the number of players.
@@ -173,10 +193,8 @@ async function movePlayerDelay(value) {
         }
     }
 
+    // Set a flag to indicate that player movement has finished.
     currentlyMoving = false;
-
 }
-
-
 
 
