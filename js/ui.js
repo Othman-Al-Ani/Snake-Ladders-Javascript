@@ -1,8 +1,8 @@
 
 function initIndexPage(){
-    document.getElementById("volume").addEventListener("click", mute);
-    document.getElementById("question").addEventListener("click", tut);
-    document.getElementById("play").addEventListener("click", playset);
+    document.getElementById("volume")?.addEventListener("click", mute);
+    document.getElementById("question")?.addEventListener("click", tut);
+    document.getElementById("play")?.addEventListener("click", playset);
 }
 function initGamePage(){
     document.getElementById("restartBtn").addEventListener("click", restartGame);
