@@ -66,7 +66,7 @@ let SnakesAndLadders = [
 
 let playerPosArr = [];
 
-    //Default player position
+//Default player position
 
 var currentlyMoving = false;    // Variable to not allow the dice to be spammed and allow animation to play.
 
@@ -76,26 +76,9 @@ var gameBoard = document.getElementById("gameboard");
 
 var playerTurn = 0;     //Players turn var
 
-diceImg.addEventListener('click', rollDice);
-
-// The dice rolling function. || Triggers when pressing the dice img 
-function rollDice() {
-    if (currentlyMoving) return;
-    var rand = Math.floor(Math.random() * 6 + 1);
+diceImg.addEventListener('click', throwDice);
 
 
-    diceImg.src = "../Dices/Dice" + rand + ".svg";
-    movePlayerDelay(rand);
-    currentlyMoving = true;
-
-  
-    document.getElementById("playerH1").innerHTML = "Player " + (playerTurn + 1) + "'s turn";
-    console.log(playerTurn);
-
-    return rand;
-
-
-}
 
 
 // This function loads the game and initializes player elements.
@@ -121,6 +104,26 @@ function loadGame() {
         playerPosArr.push(1);
     }
 }
+
+// The dice rolling function. || Triggers when pressing the dice img
+async function throwDice() {
+    if (currentlyMoving) return;
+    var rand = Math.floor(Math.random() * 6 + 1);
+    diceImg.src = "../Dices/dice-gif.gif";
+    var alpha = Math.floor(Math.random() * 800 + 300);
+    //console.log(alpha)
+    await delay(alpha);
+    diceImg.src = "../Dices/Dice" + rand + ".svg";
+    movePlayerDelay(rand);
+    currentlyMoving = true;
+
+
+    document.getElementById("playerH1").innerHTML = "Player " + (playerTurn + 1) + "'s turn";
+    console.log(playerTurn);
+
+    return rand;
+}
+
 
 //Moving the player || Animating the movement for player
 async function movePlayerDelay(value) {
