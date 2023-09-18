@@ -152,6 +152,61 @@ body {
     border:5px dashed black;
 }
 
+#winner{
+   
+    position: absolute;
+    z-index: 9001;
+    align-items: center;
+    justify-content: center;
+    width: 45vw;
+    height: 36vh;
+    border-radius: 25px;
+    padding: 20px;
+
+    left: 11vw;
+    top: 70px;
+    
+    
+    text-align: center;
+    background-color:  #DDBEB1;
+    border: solid 10px #eadbdb;
+    box-shadow: 4px 4px 13px black;
+
+
+}
+
+#winner .h1 {
+    margin-top: 10%;
+    font-size: 72px;
+    height: 5%;
+}
+
+
+#winner a {
+    text-align: center;
+    margin: auto;
+    padding: 2px;
+    width: 200px;
+    height: 120px;
+    border: solid 5px #eadbdb;
+    border-radius: 10px;
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    font-size: 24px; /* Adjust the font size as needed */
+}
+
+#flexer{
+    display: flex;
+    margin-top: 5%;
+   
+}
+
+
+
+
+
+
 /*Overwrite for tutorial popup position*/
 #tutorial{
     right: 30vw;

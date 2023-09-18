@@ -19,6 +19,15 @@
     </div>
     </header>
 
+    <div id="winner" class="hide" > 
+        <h1 id="win-title"> </h1>
+         <div id="flexer">
+            <a class="win-btn" href="index.html">New Game</a>
+            <a id="restartBtn" class="win-btn" >Restart</a>
+        </div>
+
+    </div>
+
     <div id="gameboard">
         <div class="cell" id="100"></div>
         <div class="cell" id="99"></div>
@@ -147,6 +156,7 @@
             <a href="index.html">New Game</a>
             <a id="restartBtn">Restart</a>
             <a id="question">Tutorial</a>
+            <button onclick="playerWon()"> </button>
         </div>
         <div class="playersTurn" style="display: flex; flex-direction: row;" >
 

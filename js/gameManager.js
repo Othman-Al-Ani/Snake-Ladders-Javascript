@@ -238,7 +238,14 @@ async function movePlayerDelay(value) {
     currentlyMoving = false;
 }
 function playerWon(){
-    console.log("Player with value: "+playerTurn+" won");
+    console.log("won");
+
+   document.getElementById("win-title").innerText = "Player " + (playerTurn + 1) + " won!!";
+
     diceImg.style.display = "none";
+
+    var win = document.getElementById("winner");
+    win.classList.toggle("hide");
+
 }
 
