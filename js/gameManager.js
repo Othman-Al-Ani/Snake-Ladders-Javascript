@@ -110,6 +110,8 @@ function loadGame() {
 
 }
 
+
+
 // The dice rolling function. || Triggers when pressing the dice img
 async function throwDice() {
     // If a player is currently moving, exit the function to prevent multiple moves.
