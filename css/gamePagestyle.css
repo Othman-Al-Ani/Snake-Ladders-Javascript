@@ -201,7 +201,17 @@ body {
 }
 
 
+#coloredBox {
+    height: 100px; 
+    width: 100px; 
+    background-color: red; 
+    margin-top: 20px; 
+    margin-left: 100px; 
+    border-radius: 60px;
 
+    box-shadow: 1px 1px 8px black;
+    border:5px dashed black;
+}
 
 
 
