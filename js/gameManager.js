@@ -129,16 +129,21 @@ async function throwDice() {
 
     // Change the source of the dice image to display the rolled number.
     diceImg.src = "../Dices/Dice" + rand + ".svg";
-
+    console.log(rand);
     // Check if moving the player would exceed the game board's size (100 cells).
     if ((playerPosArr[playerTurn] + rand) > 100) {
         // Move to the next player's turn.
-        playerTurn++;
-
-        // Ensure playerTurn cycles back to 0 when it exceeds the number of players.
-        if (playerTurn >= playerPosArr.length) {
-            playerTurn = 0;
+      
+    
+        if (rand != 6) {
+            playerTurn++;
+            updateActivePlayer();
+            // Ensure playerTurn cycles back to 0 when it exceeds the number of players.
+            if (playerTurn >= playerPosArr.length) {
+                playerTurn = 0;
+            }
         }
+    
     } else {
         // Move the player by calling the 'movePlayerDelay' function with the rolled value.
         movePlayerDelay(rand);
@@ -147,7 +152,7 @@ async function throwDice() {
         currentlyMoving = true;
     }
 
-    
+   
 
     // Return the rolled dice value.
     return rand;
@@ -181,6 +186,7 @@ async function movePlayerDelay(value) {
         
         // Update the player's position in the array.
         playerPosArr[playerTurn]++;
+        console.log(playerTurn);
     }
 
     // Check if the player landed on a snake or ladder.
@@ -208,6 +214,7 @@ async function movePlayerDelay(value) {
     if(playerPosArr[playerTurn] == 100){
         playerWon();
     }
+   
     // If the player didn't roll a 6, increment the playerTurn.
     if (value != 6) {
         playerTurn++;
@@ -217,7 +224,18 @@ async function movePlayerDelay(value) {
             playerTurn = 0;
         }
     }
+
+
     // Update the HTML element to indicate whose turn it is.
+    
+
+    updateActivePlayer();
+    // Set a flag to indicate that player movement has finished.
+    currentlyMoving = false;
+}
+
+
+function updateActivePlayer() {
     document.getElementById("playerH1").innerHTML = "Player " + (playerTurn + 1) + "'s turn";
 
     if (playerTurn == 0) {
@@ -232,11 +250,16 @@ async function movePlayerDelay(value) {
         document.getElementById("coloredBox").style.backgroundColor = "white";
     }
 
-    var player = document.getElementById("player"+(playerTurn+1));
-    player.classList.toggle("active");
-    // Set a flag to indicate that player movement has finished.
-    currentlyMoving = false;
+    for (let i = 0; i < playerPosArr.length; i++) {
+        const player = document.getElementById("player" + (i + 1));
+        if (i === playerTurn) {
+            player.classList.add("active");
+        } else {
+            player.classList.remove("active");
+        }
+    }
 }
+
 function playerWon(){
     console.log("won");
 
