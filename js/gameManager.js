@@ -186,6 +186,7 @@ async function movePlayerDelay(value) {
     // Check if the player landed on a snake or ladder.
     for (j = 0; j < SnakesAndLadders.length; j++) {
         if (playerPosArr[playerTurn] == SnakesAndLadders[j].pos) {
+            await delay (300)
             // Remove the player's div from the current cell.
             var div = document.getElementById(playerPosArr[playerTurn]);
             var playerNameID = "player" + (playerTurn + 1);
