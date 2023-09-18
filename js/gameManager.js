@@ -63,6 +63,8 @@ let SnakesAndLadders = [
 ]
 
 
+const sfx = document.getElementById('sfx');
+
 //Default player position
 let playerPosArr = [];
 
@@ -76,7 +78,7 @@ var gameBoard = document.getElementById("gameboard");
 var playerTurn = 0;     //Players turn var
 
 //How fast does player move from one div to another [miliseconds]
-var movingSpeed = 200;
+var moveSpeed = 200;
 
 
 
@@ -168,7 +170,10 @@ async function movePlayerDelay(value) {
         var nextDiv = document.getElementById(playerPosArr[playerTurn] + 1);
         
         // Pause execution
-        await delay(movingSpeed);
+        sfx.play();
+        await delay(moveSpeed);
+        sfx.pause();
+        sfx.currentTime = 0;
 
         // Remove the player's div element from the current cell.
         var playerNameID = "player" + (playerTurn + 1);
