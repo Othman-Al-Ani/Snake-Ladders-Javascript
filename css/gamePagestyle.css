@@ -34,15 +34,18 @@ body {
 }
 
 .dice {
-    margin-left: 100px;
-    margin-top: 100px;
-    width: 500px;
-    height: 500px;
-    background: rgb(93, 93, 184);
+    margin: 100px auto;    
+    width: 400px;
+    height: 400px;
+    background: #819A88;
 
     display: flex;
     align-items: center;
     justify-content: center;
+
+    border-radius: 25px;
+
+    box-shadow: 0px 0px 20px #39423c inset;
 
 }
 
@@ -50,6 +53,11 @@ body {
     height: 200px;
     width: 200px;
     cursor: pointer;
+    background-color: #5b6f61;
+    
+    border-radius: 25px;
+
+    box-shadow: 0px 0px 15px #39423c;
 }
 
 
@@ -59,10 +67,15 @@ body {
 
     position: absolute;
     right: 0;
+
+    padding-top: 5vh;
+
     width: 740px;
     height: 100%;
-    background-color: rgb(25, 67, 30);
+    background-color: #5b6f61;
     margin-bottom: 125px;
+
+    box-shadow: -2px 0px 20px #39423c;
 }
 
 .settings h1 {
@@ -70,6 +83,7 @@ body {
     margin-inline: auto;
     font-size: 60px;
     color: white;
+    text-shadow: 4px 4px 2px #39423c;
 }
 
 .settings a {
@@ -78,7 +92,7 @@ body {
     margin-inline: auto;
     margin-top: 15px;
     border-radius: 15px;
-    background-color:red;
+    background-color:#BEB1DD;
     text-decoration: none;
     color:black;
     display: flex;
@@ -86,7 +100,13 @@ body {
     align-items: center;
     border:1px solid black;
     font-size: 2rem;
+    text-shadow: 1px 1px 2px #000;
 }
+
+.settings .playersTurn-h1 {
+    margin-left: 30px;
+}
+
 .gameButtons{
     padding-bottom: 80px;
     
@@ -150,6 +170,7 @@ body {
     border:5px dashed black;
 }
 
+
 #winner{
    
     position: absolute;
@@ -202,11 +223,11 @@ body {
 
 
 #coloredBox {
-    height: 100px; 
-    width: 100px; 
+    height: 80px; 
+    width: 80px; 
     background-color: red; 
-    margin-top: 20px; 
-    margin-left: 100px; 
+    margin-top: 40px; 
+    margin-left: 70px; 
     border-radius: 60px;
 
     box-shadow: 1px 1px 8px black;
