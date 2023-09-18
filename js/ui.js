@@ -20,11 +20,10 @@ for (var i = 0; i < restartButtons.length; i++) {
 
 
 
-
+music.volume = 0.25;
 function mute() {
     var icon = document.getElementById("volume-change");
     const music = document.getElementById('music');
-    music.volume = 0.5;
     if (music.paused) {
         music.play();
         icon.classList.toggle("bxs-volume-mute");
