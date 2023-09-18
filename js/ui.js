@@ -5,7 +5,14 @@ function initIndexPage() {
     document.getElementById("play")?.addEventListener("click", playset);
 }
 function initGamePage() {
-    document.getElementById("restartBtn").addEventListener("click", restartGame);
+
+    var restartButtons = document.getElementsByClassName("restartBtn");
+
+// Loop through the elements and add the event listener to each one
+for (var i = 0; i < restartButtons.length; i++) {
+  restartButtons[i].addEventListener("click", restartGame);
+}
+    
 
 }
 
@@ -61,4 +68,5 @@ function playset() {
 
 function restartGame() {
     location.reload();
+    console.log("yos");
 }
