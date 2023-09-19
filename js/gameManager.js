@@ -63,7 +63,8 @@ let SnakesAndLadders = [
 ]
 
 
-const sfx = document.getElementById('sfx');
+const sfxWalking = document.getElementById('sfxWalking');
+const sfxSliding = document.getElementById('sfxSliding')
 
 //Default player position
 let playerPosArr = [];
@@ -175,10 +176,10 @@ async function movePlayerDelay(value) {
         var nextDiv = document.getElementById(playerPosArr[playerTurn] + 1);
         
         // Pause execution
-        sfx.play();
+        sfxWalking.play();
         await delay(moveSpeed);
-        sfx.pause();
-        sfx.currentTime = 0;
+        sfxWalking.pause();
+        sfxWalking.currentTime = 0;
 
         // Remove the player's div element from the current cell.
         var playerNameID = "player" + (playerTurn + 1);
@@ -200,6 +201,7 @@ async function movePlayerDelay(value) {
     for (j = 0; j < SnakesAndLadders.length; j++) {
         if (playerPosArr[playerTurn] == SnakesAndLadders[j].pos) {
             await delay (moveSpeed + 300);
+            sfxSliding.play();
             // Remove the player's div from the current cell.
             var div = document.getElementById(playerPosArr[playerTurn]);
             var playerNameID = "player" + (playerTurn + 1);
@@ -217,6 +219,8 @@ async function movePlayerDelay(value) {
 
             // Append the new player div to the new cell.
             div.appendChild(newPlayerDiv);
+            sfxWalking.pause();
+            sfxWalking.currentTime = 0;
         }
     }
     if(playerPosArr[playerTurn] == 100){
