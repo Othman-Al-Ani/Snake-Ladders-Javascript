@@ -22,18 +22,18 @@ function initGamePage() {
 
 music.volume = 0.25;
 function mute() {
+
     var icon = document.getElementById("volume-change");
     const music = document.getElementById('music');
     if (music.paused) {
         music.play();
-        icon.classList.toggle("bxs-volume-mute");
-        console.log('music playin');
     }
     else {
         music.pause();
-        icon.classList.toggle("bxs-volume-mute");
-        console.log('music paused');
     }
+    icon.classList.toggle("bxs-volume-mute");
+
+    localStorage.setItem("isMuted",music.paused );
 }
 
 
