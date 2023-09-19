@@ -4,22 +4,24 @@
 # Front page
 
 Our front page
-![My Image](img/s&k-index.png)
+
+<img src="img/s&k-index.png" alt="My Image" width="500px" height="300px">
 
 Player selection
-![My Image](img/s&k-players.png)
+
+<img src="img/s&k-players.png" alt="My Image" width="500px" height="300px">
 
 
 # The game
 
 
-![My Image](img/s&k-game.png)
+<img src="img/s&k-game.png" alt="My Image" width="500px" height="300px">
 
 
-
-![My Image](img/s&k-tutorial.png)
+<img src="img/s&k-tutorial.png" alt="My Image" width="500px" height="300px">
 
 WINNING
-![My Image](img/s&k-win.png)
+
+<img src="img/s&k-win.png" alt="My Image" width="500px" height="300px">
 
 
