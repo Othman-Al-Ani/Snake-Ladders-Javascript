@@ -3,11 +3,12 @@ function initIndexPage() {
     document.getElementById("volume")?.addEventListener("click", mute);
     document.getElementById("question")?.addEventListener("click", tut);
     document.getElementById("play")?.addEventListener("click", playset);
+    const indexMusic = document.getElementById('indexMusic');
 }
 function initGamePage() {
 
     var restartButtons = document.getElementsByClassName("restartBtn");
-
+    document.getElementById("question")?.addEventListener("click", tut);
     // Loop through the elements and add the event listener to each one
     for (var i = 0; i < restartButtons.length; i++) {
         restartButtons[i].addEventListener("click", restartGame);
@@ -19,22 +20,21 @@ function initGamePage() {
 
 
 
-
-music.volume = 0.25;
 function mute() {
 
     var icon = document.getElementById("volume-change");
-    const music = document.getElementById('music');
-    if (music.paused) {
-        music.play();
+
+    if (indexMusic.paused) {
+        indexMusic.play();
+        icon.classList.toggle("bxs-volume-mute");
+        console.log('music playin');
     }
     else {
-        music.pause();
+        indexMusic.pause();
+        icon.classList.toggle("bxs-volume-mute");
+        console.log('music paused');
     }
-    icon.classList.toggle("bxs-volume-mute");
-
-    localStorage.setItem("isMuted",music.paused );
-}
+}   
 
 
 function tut() {
