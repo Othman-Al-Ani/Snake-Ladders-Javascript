@@ -19,21 +19,33 @@ function initGamePage() {
 
 
 
-
-music.volume = 0.25;
+const indexMusic = document.getElementById('indexMusic');
+indexMusic.volume = 0.25;
 function mute() {
     var icon = document.getElementById("volume-change");
-    const music = document.getElementById('music');
-    if (music.paused) {
-        music.play();
+    const indexMusic = document.getElementById('indexMusic');
+   //const gameMusic = document.getElementById('gameMusic');
+
+    if (indexMusic.paused) {
+        indexMusic.play();
         icon.classList.toggle("bxs-volume-mute");
         console.log('music playin');
     }
     else {
-        music.pause();
+        indexMusic.pause();
         icon.classList.toggle("bxs-volume-mute");
         console.log('music paused');
     }
+    /*if (gameMusic.paused) {
+        gameMusic.play();
+        icon.classList.toggle("bxs-volume-mute");
+        console.log('music playin');
+    }
+    else {
+        gameMusic.pause();
+        icon.classList.toggle("bxs-volume-mute");
+        console.log('music paused');
+    } */
 }
 
 
