@@ -65,6 +65,7 @@ let SnakesAndLadders = [
 
 const sfxWalking = document.getElementById('sfxWalking');
 const sfxSliding = document.getElementById('sfxSliding');
+const sfxWin = document.getElementById('sfxWin');
 
 
 //Default player position
@@ -135,7 +136,6 @@ async function throwDice() {
 
     // Change the source of the dice image to display the rolled number.
     diceImg.src = "../Dices/Dice" + rand + ".svg";
-    console.log(rand);
     // Check if moving the player would exceed the game board's size (100 cells).
     if ((playerPosArr[playerTurn] + rand) > 100) {
         // Move to the next player's turn.
@@ -196,7 +196,6 @@ async function movePlayerDelay(value) {
 
         // Update the player's position in the array.
         playerPosArr[playerTurn]++;
-        console.log(playerTurn);
     }
 
     // Check if the player landed on a snake or ladder.
@@ -275,7 +274,6 @@ function updateActivePlayer() {
 }
 
 function playerWon() {
-    console.log("won");
 
     document.getElementById("win-title").innerText = "Player " + (playerTurn + 1) + " won!!";
 
@@ -298,6 +296,8 @@ function playerWon() {
 
     var win = document.getElementById("winner");
     win.classList.toggle("hide");
+
+    sfxWin.play();
 
     var blurr = document.getElementById("blurrer");
     blurr.classList.toggle("hide");

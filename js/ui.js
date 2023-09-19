@@ -35,7 +35,7 @@ function mute() {
     }
     icon.classList.toggle("bxs-volume-mute");
 
-}   
+}
 
 
 function tut() {
@@ -64,5 +64,4 @@ function playset() {
 
 function restartGame() {
     location.reload();
-    console.log("yos");
 }
