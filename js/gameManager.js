@@ -109,7 +109,7 @@ function loadGame() {
 
     diceImg.addEventListener('click', throwDice);
 
-    var player = document.getElementById("player"+(playerTurn+1));
+    var player = document.getElementById("player" + (playerTurn + 1));
     player.classList.toggle("active");
 
 }
@@ -139,18 +139,18 @@ async function throwDice() {
     // Check if moving the player would exceed the game board's size (100 cells).
     if ((playerPosArr[playerTurn] + rand) > 100) {
         // Move to the next player's turn.
-      
-    
+
+
         if (rand != 6) {
             playerTurn++;
-            
+
             // Ensure playerTurn cycles back to 0 when it exceeds the number of players.
             if (playerTurn >= playerPosArr.length) {
                 playerTurn = 0;
             }
             updateActivePlayer();
         }
-    
+
     } else {
         // Move the player by calling the 'movePlayerDelay' function with the rolled value.
         movePlayerDelay(rand);
@@ -159,7 +159,7 @@ async function throwDice() {
         currentlyMoving = true;
     }
 
-   
+
 
     // Return the rolled dice value.
     return rand;
@@ -173,10 +173,10 @@ async function movePlayerDelay(value) {
     for (i = 1; i <= value; i++) {
         // Get the current player's position cell element by its ID.
         var div = document.getElementById(playerPosArr[playerTurn]);
-        
+
         // Get the next cell element where the player will move.
         var nextDiv = document.getElementById(playerPosArr[playerTurn] + 1);
-        
+
         // Pause execution
         sfxWalking.play();
         await delay(moveSpeed);
@@ -190,10 +190,10 @@ async function movePlayerDelay(value) {
         // Create a new div for the player.
         var newPlayerDiv = document.createElement("div");
         newPlayerDiv.id = playerNameID;
-        
+
         // Append the new player div to the next cell.
         nextDiv.appendChild(newPlayerDiv);
-        
+
         // Update the player's position in the array.
         playerPosArr[playerTurn]++;
         console.log(playerTurn);
@@ -202,7 +202,7 @@ async function movePlayerDelay(value) {
     // Check if the player landed on a snake or ladder.
     for (j = 0; j < SnakesAndLadders.length; j++) {
         if (playerPosArr[playerTurn] == SnakesAndLadders[j].pos) {
-            await delay (moveSpeed + 300);
+            await delay(moveSpeed + 300);
             sfxSliding.play();
             // Remove the player's div from the current cell.
             var div = document.getElementById(playerPosArr[playerTurn]);
@@ -225,10 +225,10 @@ async function movePlayerDelay(value) {
             sfxWalking.currentTime = 0;
         }
     }
-    if(playerPosArr[playerTurn] == 100){
+    if (playerPosArr[playerTurn] == 100) {
         playerWon();
     }
-   
+
     // If the player didn't roll a 6, increment the playerTurn.
     if (value != 6) {
         playerTurn++;
@@ -241,7 +241,7 @@ async function movePlayerDelay(value) {
 
 
     // Update the HTML element to indicate whose turn it is.
-    
+
 
     updateActivePlayer();
     // Set a flag to indicate that player movement has finished.
@@ -260,7 +260,7 @@ function updateActivePlayer() {
         document.getElementById("coloredBox").style.backgroundColor = "green";
     } else if (playerTurn == 3) {
         document.getElementById("coloredBox").style.backgroundColor = "yellow";
-    }else {
+    } else {
         document.getElementById("coloredBox").style.backgroundColor = "white";
     }
 
@@ -274,27 +274,27 @@ function updateActivePlayer() {
     }
 }
 
-function playerWon(){
+function playerWon() {
     console.log("won");
 
-   document.getElementById("win-title").innerText = "Player " + (playerTurn + 1) + " won!!";
+    document.getElementById("win-title").innerText = "Player " + (playerTurn + 1) + " won!!";
 
     diceImg.style.pointerEvents = "none";
 
 
 
- // Get the parent div element with id "gameButtons"
-var gameButtonsDiv = document.getElementById("gameButtons");
+    // Get the parent div element with id "gameButtons"
+    var gameButtonsDiv = document.getElementById("gameButtons");
 
-// Get all <a> elements within the div
-var aElements = gameButtonsDiv.querySelectorAll("a");
+    // Get all <a> elements within the div
+    var aElements = gameButtonsDiv.querySelectorAll("a");
 
-// Loop through the <a> elements and disable them using CSS
-for (var i = 0; i < aElements.length; i++) {
-  aElements[i].style.pointerEvents = "none";
-}
+    // Loop through the <a> elements and disable them using CSS
+    for (var i = 0; i < aElements.length; i++) {
+        aElements[i].style.pointerEvents = "none";
+    }
 
-   
+
 
     var win = document.getElementById("winner");
     win.classList.toggle("hide");
