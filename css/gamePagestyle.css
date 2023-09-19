@@ -213,7 +213,9 @@ body {
     justify-content: center; /* Center horizontally */
     font-size: 24px; /* Adjust the font size as needed */
 }
-
+.restartBtn{
+    cursor: pointer;
+}
 #flexer{
     display: flex;
     margin-top: 5%;
