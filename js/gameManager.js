@@ -293,10 +293,13 @@ for (var i = 0; i < aElements.length; i++) {
   aElements[i].style.pointerEvents = "none";
 }
 
-
+   
 
     var win = document.getElementById("winner");
     win.classList.toggle("hide");
+
+    var blurr = document.getElementById("blurrer");
+    blurr.classList.toggle("hide");
 
 }
 

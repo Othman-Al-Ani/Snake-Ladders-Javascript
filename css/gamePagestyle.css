@@ -174,7 +174,7 @@ body {
 #winner{
    
     position: absolute;
-    z-index: 9001;
+    z-index: 9002;
     align-items: center;
     justify-content: center;
     width: 45vw;
@@ -235,6 +235,21 @@ body {
 
 
 
+#blurrer{
+    position: absolute;
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+    height: 100vh;
+    width: 100vw;
+    z-index: 9001;
+    background-color: #141615;
+    background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.7;
+}
+
+
 /*Overwrite for tutorial popup position*/
 #tutorial{
     right: 30vw;
@@ -244,3 +259,4 @@ body {
 .active{
     border: 6px dashed !important;
 }
+
