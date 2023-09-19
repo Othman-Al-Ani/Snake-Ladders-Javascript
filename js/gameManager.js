@@ -278,7 +278,7 @@ function playerWon(){
 
    document.getElementById("win-title").innerText = "Player " + (playerTurn + 1) + " won!!";
 
-    diceImg.style.display = "none";
+    diceImg.style.pointerEvents = "none";
 
 
 
