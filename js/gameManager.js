@@ -280,6 +280,21 @@ function playerWon(){
 
     diceImg.style.display = "none";
 
+
+
+ // Get the parent div element with id "gameButtons"
+var gameButtonsDiv = document.getElementById("gameButtons");
+
+// Get all <a> elements within the div
+var aElements = gameButtonsDiv.querySelectorAll("a");
+
+// Loop through the <a> elements and disable them using CSS
+for (var i = 0; i < aElements.length; i++) {
+  aElements[i].style.pointerEvents = "none";
+}
+
+
+
     var win = document.getElementById("winner");
     win.classList.toggle("hide");
 
