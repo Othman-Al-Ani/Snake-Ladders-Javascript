@@ -1,3 +1,5 @@
-# Snake-Ladders-Javascript
+# Snake & Ladders JavaScript Game!
+
+![My Image](img/s%k-index)
 
 
