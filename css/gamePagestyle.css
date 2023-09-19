@@ -17,7 +17,7 @@ body {
 
     margin-top: 20px;
     margin-left: 70px;
-    
+
 
 }
 
@@ -30,11 +30,11 @@ body {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;*/
 
-    
+
 }
 
 .dice {
-    margin: 100px auto;    
+    margin: 100px auto;
     width: 400px;
     height: 400px;
     background: #819A88;
@@ -54,7 +54,7 @@ body {
     width: 200px;
     cursor: pointer;
     background-color: #5b6f61;
-    
+
     border-radius: 25px;
 
     box-shadow: 0px 0px 15px #39423c;
@@ -92,13 +92,13 @@ body {
     margin-inline: auto;
     margin-top: 15px;
     border-radius: 15px;
-    background-color:#BEB1DD;
+    background-color: #BEB1DD;
     text-decoration: none;
-    color:black;
+    color: black;
     display: flex;
     justify-content: center;
     align-items: center;
-    border:1px solid black;
+    border: 1px solid black;
     font-size: 2rem;
     text-shadow: 1px 1px 2px #000;
 }
@@ -107,11 +107,12 @@ body {
     margin-left: 30px;
 }
 
-#gameButtons{
+#gameButtons {
     padding-bottom: 80px;
-    
+
 }
-.playersTurn{
+
+.playersTurn {
     border-bottom: 1px solid white;
     border-top: 1px solid white;
 }
@@ -130,11 +131,11 @@ body {
     border-radius: 55px;
 
     box-shadow: 1px 1px 8px black;
-    border:5px dashed black;
+    border: 5px dashed black;
 
 }
 
-#player2{
+#player2 {
     background: blue;
     position: relative;
     z-index: 9000;
@@ -143,10 +144,10 @@ body {
     border-radius: 55px;
 
     box-shadow: 1px 1px 8px black;
-    border:5px dashed black;
+    border: 5px dashed black;
 }
 
-#player3{
+#player3 {
     background: green;
     position: relative;
     z-index: 9000;
@@ -155,10 +156,10 @@ body {
     border-radius: 55px;
 
     box-shadow: 1px 1px 8px black;
-    border:5px dashed black;
+    border: 5px dashed black;
 }
 
-#player4{
+#player4 {
     background: yellow;
     position: relative;
     z-index: 9000;
@@ -167,12 +168,12 @@ body {
     border-radius: 55px;
 
     box-shadow: 1px 1px 8px black;
-    border:5px dashed black;
+    border: 5px dashed black;
 }
 
 
-#winner{
-   
+#winner {
+
     position: absolute;
     z-index: 9002;
     align-items: center;
@@ -184,10 +185,10 @@ body {
 
     left: 11vw;
     top: 70px;
-    
-    
+
+
     text-align: center;
-    background-color:  #DDBEB1;
+    background-color: #DDBEB1;
     border: solid 10px #eadbdb;
     box-shadow: 4px 4px 13px black;
 
@@ -209,35 +210,40 @@ body {
     border: solid 5px #eadbdb;
     border-radius: 10px;
     display: flex;
-    align-items: center; /* Center vertically */
-    justify-content: center; /* Center horizontally */
-    font-size: 24px; /* Adjust the font size as needed */
+    align-items: center;
+    /* Center vertically */
+    justify-content: center;
+    /* Center horizontally */
+    font-size: 24px;
+    /* Adjust the font size as needed */
 }
-.restartBtn{
+
+.restartBtn {
     cursor: pointer;
 }
-#flexer{
+
+#flexer {
     display: flex;
     margin-top: 5%;
-   
+
 }
 
 
 #coloredBox {
-    height: 80px; 
-    width: 80px; 
-    background-color: red; 
-    margin-top: 40px; 
-    margin-left: 70px; 
+    height: 80px;
+    width: 80px;
+    background-color: red;
+    margin-top: 40px;
+    margin-left: 70px;
     border-radius: 60px;
 
     box-shadow: 1px 1px 8px black;
-    border:5px dashed white;
+    border: 5px dashed white;
 }
 
 
 
-#blurrer{
+#blurrer {
     position: absolute;
     filter: blur(8px);
     -webkit-filter: blur(8px);
@@ -246,19 +252,18 @@ body {
     z-index: 9001;
     background-color: #141615;
     background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  opacity: 0.7;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.7;
 }
 
 
 /*Overwrite for tutorial popup position*/
-#tutorial{
+#tutorial {
     right: 30vw;
     height: fit-content;
 }
 
-.active{
+.active {
     border: 6px dashed !important;
 }
-
