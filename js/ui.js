@@ -1,39 +1,40 @@
+const music = document.getElementById('music');
 
 function initIndexPage() {
     document.getElementById("volume")?.addEventListener("click", mute);
     document.getElementById("question")?.addEventListener("click", tut);
     document.getElementById("play")?.addEventListener("click", playset);
-    const indexMusic = document.getElementById('indexMusic');
+
+    music.volume = 1;
+
 }
 function initGamePage() {
 
     var restartButtons = document.getElementsByClassName("restartBtn");
+
+    document.getElementById("volume")?.addEventListener("click", mute);
     document.getElementById("question")?.addEventListener("click", tut);
     // Loop through the elements and add the event listener to each one
     for (var i = 0; i < restartButtons.length; i++) {
         restartButtons[i].addEventListener("click", restartGame);
     }
 
+    music.volume = 0.25;
+
 
 }
-
-
-
-
 function mute() {
 
     var icon = document.getElementById("volume-change");
 
-    if (indexMusic.paused) {
-        indexMusic.play();
-        icon.classList.toggle("bxs-volume-mute");
-        console.log('music playin');
+    if (music.paused) {
+        music.play();
     }
     else {
-        indexMusic.pause();
-        icon.classList.toggle("bxs-volume-mute");
-        console.log('music paused');
+        music.pause();
     }
+    icon.classList.toggle("bxs-volume-mute");
+
 }   
 
 

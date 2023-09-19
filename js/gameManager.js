@@ -65,25 +65,7 @@ let SnakesAndLadders = [
 
 const sfxWalking = document.getElementById('sfxWalking');
 const sfxSliding = document.getElementById('sfxSliding');
-const gameMusic = document.getElementById('gameMusic');
 
-
-document.getElementById("volume")?.addEventListener("click", gameMute);
-gameMusic.volume = 0.25;
-function gameMute() {
-    var icon = document.getElementById("volume-change");
-
-    if (gameMusic.paused) {
-        gameMusic.play();
-        icon.classList.toggle("bxs-volume-mute");
-        console.log('music playin');
-    }
-    else {
-        gameMusic.pause();
-        icon.classList.toggle("bxs-volume-mute");
-        console.log('music paused');
-    } 
-}
 
 //Default player position
 let playerPosArr = [];
