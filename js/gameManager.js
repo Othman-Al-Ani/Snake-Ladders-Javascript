@@ -141,11 +141,12 @@ async function throwDice() {
     
         if (rand != 6) {
             playerTurn++;
-            updateActivePlayer();
+            
             // Ensure playerTurn cycles back to 0 when it exceeds the number of players.
             if (playerTurn >= playerPosArr.length) {
                 playerTurn = 0;
             }
+            updateActivePlayer();
         }
     
     } else {
