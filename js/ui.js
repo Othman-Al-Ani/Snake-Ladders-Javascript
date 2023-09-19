@@ -8,11 +8,11 @@ function initGamePage() {
 
     var restartButtons = document.getElementsByClassName("restartBtn");
 
-// Loop through the elements and add the event listener to each one
-for (var i = 0; i < restartButtons.length; i++) {
-  restartButtons[i].addEventListener("click", restartGame);
-}
-    
+    // Loop through the elements and add the event listener to each one
+    for (var i = 0; i < restartButtons.length; i++) {
+        restartButtons[i].addEventListener("click", restartGame);
+    }
+
 
 }
 
@@ -29,12 +29,12 @@ function mute() {
         icon.classList.toggle("bxs-volume-mute");
         console.log('music playin');
     }
-    else{
+    else {
         music.pause();
         icon.classList.toggle("bxs-volume-mute");
         console.log('music paused');
     }
-} 
+}
 
 
 function tut() {
@@ -46,8 +46,6 @@ function tut() {
         el.classList.toggle("hide");
     } else {
         el.classList.toggle("hide");
-
-
     }
 }
 
@@ -60,8 +58,6 @@ function playset() {
         ps.classList.toggle("hide");
     } else {
         ps.classList.toggle("hide");
-
-
     }
 }
 
