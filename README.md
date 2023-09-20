@@ -11,7 +11,7 @@ The goal of the project was to produce a short and simple game using only HTML/C
 
 ## Front page
 
-<img src="img/s&k-index.png" alt="My Image" width="870px" height="500px">
+<img src="img/s&k-index.png" alt="Frontpage Image" >
 
 <br>
 
@@ -20,5 +20,5 @@ The goal of the project was to produce a short and simple game using only HTML/C
 
 ## The Game
 
-<img src="img/s&k-game.png" alt="My Image" width="870px" height="500px">
+<img src="img/s&k-game.png" alt="Gamepage Image">
 
