@@ -1,3 +1,11 @@
+
+<div style="background-color: black; height: 110px; min-width: 1920px;">
+<img src="img/NTiBanner.png" alt="ntiBanner;" style ="height: 100px; border: black solid 5px;">
+
+</div>
+<br>
+<br>
+
 # Snake & Ladders JavaScript Game!
 
 This was a short project made by a group of TE4 student at NTI gymnasiet in Sweden.  
@@ -21,4 +29,5 @@ The goal of the project was to produce a short and simple game using only HTML/C
 ## The Game
 
 <img src="img/s&k-game.png" alt="Gamepage Image">
+
 
